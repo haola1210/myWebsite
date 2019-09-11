@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Charmonman&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sonsie+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
+
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+.container{
+  display: grid;
+}
+header{
+  height:80px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-content: center;
+  padding: 20px;
+}
+header .logo a{
+  display: block;
+  height: 100%;
+  line-height: 40px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 24px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+header .menu-icon{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  line-height: 40px;
+  flex-grow: 1;
+  position: relative;
+}
+header .menu-icon i{
+  width: 28px;
+  height: 28px;
+  position: relative;;
+  margin-top: 5px;
+  color: #F45A3A;
+}
+header .menu-icon .drop-menu{
+  position: absolute;
+  display: none;
+  width: 200px;
+  background-color: white;
+  box-shadow: -5px 5px 10px grey, 5px 5px 10px grey;
+  top: 60px;
+  float: right;
+}
+header .menu-icon .drop-menu::after{
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  border: 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  left: 90%;
+}
+header .menu-icon .drop-menu a{
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+header .menu-icon .drop-menu a:hover{
+  background-color: #e0e0e0;
+  border-right: 2px solid #F45A3A;
+}
+
+header .top-nav{
+  display:none;
+}
+header .top-nav ul{
+  display: block;
+  list-style: none;
+  line-height: 10px;
+}
+header .top-nav ul li{
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+header .top-nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+header .top-nav ul li a:hover{
+  border-bottom: 2px solid #F45A3A;
+}
+
+
+@media screen and (min-width: 1024px){
+
+  header .menu-icon{
+    display: none;
+  }
+
+  header .top-nav{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+  }
+}
