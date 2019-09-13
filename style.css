@@ -127,13 +127,28 @@ header .top-nav ul li a:hover{
   font-size: 3em;
   color: #F7FF58;
 }
-.home .intro{
+@keyframes changecolor{
+  0%{color: #FF8A5C;}
+  16.6%{color: #F4F1BB;}
+  33.3%{color: #8FC93A ;}
+  50%{color: #65DEF1 ; }
+  66.6%{color: #CDDC29 ;}
+  83.3%{color: #CAA8F5 ;}
+}
+.home .intro {
   margin: 15px;
-  font-size: 1.5em;
+  font-size: 2em;
   word-spacing: 3px;
   font-weight: bold;
-  text-shadow: -1px 0 black, 0 1px black, 2px 0 10px black, 0 -1px black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+.home .intro span{
+  color: #FF8A5C;
+  animation-name: changecolor; 
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+
 .home .fb-btn{
   margin: 25px;
   display: inline-block;
@@ -173,6 +188,10 @@ header .top-nav ul li a:hover{
   }
   .home .hi{
     font-size: 3.75em;
+  }
+  .home .intro{
+    font-size: 2.5em;
+    word-spacing: 5px;
   }
   .home .fb-btn{
     margin: 45px;
