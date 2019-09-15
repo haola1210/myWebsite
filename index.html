@@ -11,29 +11,26 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header id="my-header">
         <div class="logo">
           <a href="#home">NgạoSenpai</a>
         </div>
         <nav class="top-nav">
           <ul>
             <li class="link-btn">
-              <a href="#home">Trang chủ</a>
+              <a class="linklink" href="#home">Trang chủ</a>
             </li>
             <li class="link-btn">
-              <a href="#bio">Tiểu sử</a>
+              <a class="linklink" href="#bio">Tiểu sử</a>
             </li>
             <li class="link-btn">
-              <a href="#character">Tính cách</a>
+              <a class="linklink" href="#hobby">Sở thích</a>
             </li>
             <li class="link-btn">
-              <a href="#hobby">Sở thích</a>
+              <a class="linklink" href="#inspire">Dành cho bạn</a>
             </li>
             <li class="link-btn">
-              <a href="#inspire">Dành cho bạn</a>
-            </li>
-            <li class="link-btn">
-              <a href="#contact">Liên hệ</a>
+              <a class="linklink" href="#contact">Liên hệ</a>
             </li>
           </ul>
         </nav>
@@ -43,7 +40,6 @@
           <div id="drop-content" class="drop-menu">
             <a href="#home">Trang chủ</a>
             <a href="#bio">Tiểu sử</a>
-            <a href="#character">Tính cách</a>
             <a href="#hobby">Sở thích</a>
             <a href="#inspire">Dành cho bạn</a>
             <a href="#contact">Liên hệ</a>
@@ -81,7 +77,7 @@
 
           <div class="body">
 
-            <section class="title">
+            <section class="page-title">
               <h1>About me</h1>
             </section>
 
@@ -110,8 +106,133 @@
 
       </div>
 
-      <div class="character">character</div>
-      <div class="hobby">hobby</div>
+      <div class="hobby" id="hobby">
+
+        <section class="page-title">
+          <h1>My hobbies</h1>
+        </section>
+
+        <div class="hobby-container">
+
+          <div class="component">
+            <div class="image">
+              <img src="./images/book.jpg" alt="my favorite book">
+            </div>
+            <div class="content">
+              <span class="title">
+                <h2>Đọc sách</h2>
+              </span>
+              <span class="detail" id="detail">
+                <p>
+                  Đối với bản thân mình đọc sách là một cách học.<br> Không thể chối cãi những lợi ích mà những quyển sách đem lại cho ta.<br>
+                  Cá nhân mình là một người kén chọn sách để đọc nên hiện tại kho sách của mình cũng chẳng quá nhiều. Xin giới thiệu cho các bạn vài quyển đáng đọc:<br>
+                  - Đắc nhân tâm, Tư duy tích cực.<br>
+                  - Nhà giả kim, Hành trình phương đông.<br>
+                  - Tony buổi sáng.<br>
+                  - Những đầu sách của Nguyễn Nhật Ánh, Lê Minh Khôi.
+                </p>
+              </span>
+            </div>
+          </div> 
+
+          <div class="component">
+            <div class="image">
+              <img src="./images/coding.jpg" alt="my coding life">
+            </div>
+            <div class="content">
+              <span class="title">
+                <h2>Lập trình</h2>
+              </span>
+              <span class="detail" id="detail">
+                <p>
+                 Thực tế khi đậu đại học, mình đã không chọn cntt, chính Chị Hai mình đã lén sửa nguyện vọng và để cả 6 nguyện vọng ấy đều là cntt :)<br> Nhưng đến hiện tại thì mình coi lập trình là một sở thích cá nhân. Và dường như đã nghiện nó :)<br> Nhân tiện, mình nhận làm bài tập hộ: lập trình java, python nha :)) 
+                </p>
+              </span>
+            </div>
+          </div>
+
+          <div class="component">
+            <div class="image">
+              <img src="./images/studing.jpg" alt="studing life">
+            </div>
+            <div class="content">
+              <span class="title">
+                <h2>Tự học</h2>
+              </span>
+              <span class="detail" id="detail">
+                <p>
+                  Lê-Nin có câu "Học, Học nữa, Học mãi".<br> 
+                  Mình thích học nhưng bản thân mình lại không thích học một cách máy móc rập khuôn. <br> Vì vậy những môn học mang tính logic hay tư duy thích hợp với mình hơn. Mình thích tìm hiểu nguyên lí và bản chất của bài toán rồi mới tìm lời giải, và điều đó nó làm việc học của mình tốn thời gian một cách khủng khiếp.<br> Ngay lúc này đây, mình đang tự học Machine Learning, mình cảm thấy nó khá thú vị và khó cực kì.
+                </p>
+              </span>
+            </div>
+          </div> 
+
+          <div class="component">
+            <div class="image">
+              <img src="./images/outdoor.jpg" alt="outdoor activities">
+            </div>
+            <div class="content">
+              <span class="title">
+                <h2>Outdoor</h2>
+              </span>
+              <span class="detail" id="detail">
+                <p>
+                  "In the galaxy far far away <br> Has a man wan to be a wolf <br> To run every where like his soul."<br> 
+                  Mình thích đi phượt những nơi thật xa, thích câu cá, leo núi, tắm suối,... nói chung là hòa mình vào thiên nhiên.<br> Còn trẻ thay vì cứ cắm mặt vào game thì chạy thật xa đến khi nhớ nhà rồi quay về thì vui lắm đó :v <br>  
+                  Hy vọng Tama đủ bản lĩnh ngồi sau xe cùng mình đi muôn nơi :)))
+                </p>
+              </span>
+            </div>
+          </div>
+
+          <div class="component">
+            <div class="image">
+              <img src="./images/film.jpg" alt="best movies">
+            </div>
+            <div class="content">
+              <span class="title">
+                <h2>Xem phim</h2>
+              </span>
+              <span class="detail" id="detail">
+                <p>
+                  Nhiều người quan niệm xem phim là để xõa stress. Nhưng với mình, những bộ phim còn đem lại những bài học và những điều khiến bản thân mình phải suy nghĩ.<br> Không những thế, nhiều bộ phim đậm chất nhân văn và là một niềm động lực lớn cho nhiều người.<br> Dưới đây là những bộ phim mà mình ấn tượng nhất.<br> 
+                  - The pursuit of happiness. <br>
+                  - Life of Pi <br>  
+                  - A Turtle's Tale: Sammy's Adventures <br>
+                  - The secret life of Walter Mitty. <br> 
+                  - The water diviner. <br> 
+                  - Hoạt hình của Ghibli. <br>
+                  - Up, Finding Nemo, Frozen,... <br>
+                  - Những bộ phim của Aamir Khan.
+                </p>
+              </span>
+            </div>
+          </div>
+
+          <div class="component">
+            <div class="image">
+              <img src="./images/music.jpg" alt="my music">
+            </div>
+            <div class="content">
+              <span class="title">
+                <h2>Nghe nhạc</h2>
+              </span>
+              <span class="detail" id="detail">
+                <p>
+                  Âm nhạc khiến cho chúng ta thoải mái và được chìm đắm trong nó. Đâu phải tự nhiên những bà mẹ lại hát ru cho con mình ngủ yên đúng không nào? <br> Thời đại nào cũng vậy, âm nhạc luôn khiến ta feel, ta chill, giúp tâm hồn bay bổng, giúp bản thân quẩy, đôi khi cũng giúp ta sống chậm lại, giúp ta thấu hiểu. <br> Những bài hát còn có thể truyền tải thông điệp mà chỉ những ai trong hoàn cảnh mới có thể hiểu được. Little do you know... <3
+                  <audio controls>
+                    <source src="./sound/vietsub-lyrics-little-do-you.mp3" type="audio/mpeg">
+                  </audio>
+                </p>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
       <div class="for-you">for you</div>
       <div class="contact">contact</div>
       <footer>footer</footer>
