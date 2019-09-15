@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css?family=Sonsie+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
 
 *{
   box-sizing: border-box;
@@ -97,14 +100,14 @@ header .top-nav ul li{
   text-align: center;
   width: 120px;
 }
-header .top-nav ul li a{
+header .top-nav ul li .linklink{
   text-decoration: none;
   color: white;
   font-family: sans-serif;
   font-size: 16px;
   font-weight: bold;
 }
-header .top-nav ul li a:hover{
+header .top-nav ul li a:not(.active):hover{
   border-bottom: 2px solid #F45A3A;
 }
 
@@ -173,6 +176,7 @@ header .top-nav ul li a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #161617;
 }
 .bio .modal{
   display: none;
@@ -236,7 +240,7 @@ header .top-nav ul li a:hover{
   background: linear-gradient(180deg, rgba(0,142,254,1) 0%, rgba(255,0,86,1) 100%);
 }
 .bio .wrap-body .body{
-  background-color: white;
+  background-color: #161617;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -244,13 +248,16 @@ header .top-nav ul li a:hover{
   padding: 10px;
   border-radius: 23px;
 }
-.bio .wrap-body .body .title{
+.page-title{
   font-family: 'Sonsie One', cursive;
   margin-top: 20px;
+  color: #c49b66;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .bio .wrap-body .body .detail{
   margin-bottom: 10px;
   text-indent: 1em;
+  color: white;
 }
 
 
@@ -259,6 +266,91 @@ header .top-nav ul li a:hover{
   text-indent: 1em;
   line-height: 1.25em;
 }
+
+.hobby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0F0F0F;
+  padding: 50px 10px;
+  flex-direction: column;
+}
+.hobby .hobby-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.hobby .hobby-container .component{
+  background-color: #0a0a0c;
+  color: #8f8f8f;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.hobby .hobby-container .component .image{
+  min-width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  margin-right: 10px;
+
+  border-radius: 10px;
+}
+.hobby .hobby-container .component .image img{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.hobby .hobby-container .component .content{
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+}
+.component .content .title{
+  flex-grow: 1;
+}
+.component .content .detail{
+  max-width: 300px;
+  flex-grow:1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.component .content .title h2{
+  margin: 0;
+  color: white;
+}
+.component .content .detail p{
+  margin: 0;
+}
+
+/*edit crollbar for this component*/
+#detail::-webkit-scrollbar{
+  width: 8px;
+}
+#detail::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 3px #F25C2A;
+  border-radius: 4px;
+}
+#detail::-webkit-scrollbar-thumb{
+  background:#c49b66;
+  border-radius: 4px;
+}
+audio{
+
+  width: 90%;
+  outline: none;
+  transform: scale(0.8);
+  opacity: 0.8;
+}
+
 
 
 
@@ -313,6 +405,14 @@ header .top-nav ul li a:hover{
   .tx-gray{
     text-indent: 0em;
   }
+
+  .hobby .hobby-container{
+    flex: 50%;
+  }
+  .hobby .hobby-container .component{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 
 @keyframes changecolor{
@@ -326,4 +426,7 @@ header .top-nav ul li a:hover{
 @keyframes zoom{
   from {transform:scale(0)} 
   to {transform:scale(1)}
+}
+.active{
+  color: #F45A3A !important;
 }
