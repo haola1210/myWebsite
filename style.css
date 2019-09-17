@@ -215,6 +215,10 @@ header .top-nav ul li a:not(.active):hover{
   border-radius: 50%;
   top:-70px;
   left: -30px;
+  animation-name: xoayxoay;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .bio .wrap-avt .avt {
   display: block;
@@ -225,6 +229,10 @@ header .top-nav ul li a:not(.active):hover{
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: 0 -65px;
+  animation-name: xoayxoay2;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .bio .wrap-avt .avt:hover{
   opacity: 0.8;
@@ -413,6 +421,14 @@ audio{
     margin-left: 50px;
     margin-right: 50px;
   }
+  .hobby .hobby-container .component .image, 
+  .hobby .hobby-container .component .image img{
+    width: 150px;
+    height: 150px;
+  }
+  .hobby .hobby-container .component .content{
+    height: 120px;
+  }
 }
 
 @keyframes changecolor{
@@ -429,4 +445,10 @@ audio{
 }
 .active{
   color: #F45A3A !important;
+}
+@keyframes xoayxoay{
+  100%{ transform: rotate(360deg); };
+}
+@keyframes xoayxoay2{
+  100%{ transform: rotate(-360deg); };
 }
