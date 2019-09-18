@@ -68,3 +68,20 @@ navChange = () => {
 
 window.addEventListener("scroll", headerChange)
 window.addEventListener("scroll", navChange)
+
+
+
+
+for(let i = 0; i < 4; i++){
+	document.getElementById("part-btn"+i).addEventListener("click", () => {
+		for(let j = 0; j < 4; j++){
+			if(j == i){
+				document.getElementById("part-btn"+j).className.baseVal = "part-btn active-btn"
+				document.getElementById("part"+j).style.display = "block"
+			} else {
+				document.getElementById("part-btn"+j).className.baseVal = "part-btn"
+				document.getElementById("part"+j).style.display = "none"
+			}
+		}
+	});
+}
