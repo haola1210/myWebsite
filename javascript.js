@@ -26,13 +26,14 @@ myModal.addEventListener("click", undisplayModal)
 let home = document.getElementById("home")
 let bio = document.getElementById("bio")
 let hobby = document.getElementById("hobby")
+let forU = document.getElementById("for-you")
 let link = document.getElementsByClassName("linklink")
 link[0].className = "linklink active"
 
 let yHome = home.offsetHeight;
 let yBio = bio.offsetHeight;
 let yHobby = hobby.offsetHeight;
-
+let yForU = forU.offsetHeight;
 
 let myHeader = document.getElementById("my-header")
 
@@ -64,6 +65,9 @@ navChange = () => {
 	if(document.body.scrollTop > yBio+yHome-100 || document.documentElement.scrollTop > yBio+yHome-100){
 		hao(link,2)
 	}
+	if(document.body.scrollTop > yForU+yBio+yHome || document.documentElement.scrollTop > yForU+yBio+yHome){
+		hao(link,3)
+	}
 }
 
 window.addEventListener("scroll", headerChange)
@@ -71,11 +75,12 @@ window.addEventListener("scroll", navChange)
 
 
 
-
+let firstShow = document.getElementById("first-show")
 for(let i = 0; i < 4; i++){
 	document.getElementById("part-btn"+i).addEventListener("click", () => {
 		for(let j = 0; j < 4; j++){
 			if(j == i){
+				firstShow.style.display = "none";
 				document.getElementById("part-btn"+j).className.baseVal = "part-btn active-btn"
 				document.getElementById("part"+j).style.display = "block"
 			} else {
