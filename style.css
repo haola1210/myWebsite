@@ -374,16 +374,18 @@ audio{
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 30px;
   background-color: #161617;
 }
 .for-you .para-title{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 60px;
   width:70%;
   background-color: #0a0a0c;;
-  border: 3px solid #292929;
+  border: 3px solid #CC2936;
   border-radius: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -407,6 +409,7 @@ audio{
   width: 80%;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 .for-you .wrap-para aside{
@@ -414,6 +417,7 @@ audio{
 }
 .for-you .wrap-para .body-fU{
   display: block;
+  position: relative;
   background-color:#0a0a0a;
   border: 3px solid black;
   height: 250px;
@@ -430,11 +434,37 @@ audio{
 .for-you .wrap-para .body-fU .parts h3{
   text-indent: 1em;
   color: white;
-}
-.for-you .wrap-para .body-fU .parts p{
-  color: 
+
 }
 
+.for-you .wrap-para .body-fU #first-show h3{
+  color: #87BD25;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.for-you .wrap-para .body-fU .animate-arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+  animation-name: movingdown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.for-you .wrap-para .body-fU .animate-arrow:before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-left: 4px solid #F45A3A;
+  border-bottom: 4px solid #F45A3A;
+  transform: rotate(-45deg);
+}
 
 
 @media screen and (min-width: 1024px){
@@ -508,6 +538,12 @@ audio{
   .hobby .hobby-container .component .content{
     height: 120px;
   }
+  .for-you .wrap-para{
+    height: 350px;
+  }
+  .for-you .wrap-para .body-fU{
+    height: 300px;
+  }
 }
 
 @keyframes changecolor{
@@ -533,4 +569,7 @@ audio{
 }
 @keyframes xoayxoay2{
   100%{ transform: rotate(-360deg); };
+}
+@keyframes movingdown{
+  100%{ transform: translate(-50%, 10%); }
 }
